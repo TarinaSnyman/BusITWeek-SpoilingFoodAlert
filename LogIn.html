@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="..\loginstyle.css">
+    <link rel="icon" type="image/png" href="">
+
+</head>
+<body>
+    <div class="wrapper">
+        <form class="loginBox" id="loginBox">
+            <div class="loginHeader">
+                <span>Login</span>
+            </div>
+            <div>
+                <img src="..\Images\login.png" alt="" class="pic" id="pic">
+            </div>
+                <div class="inputBox">
+                    <input type="text" id="user" class="inputField" required>
+                    <label for="user" class="label">Username: </label>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" id="password" class="inputField" required>
+                    <label for="password" class="label">Password:</label>
+                    <i class="bx bx-lock-alt icon" id="togglePassword"></i>
+                </div>
+                <div id="message">
+                    <!-- error message -->
+
+                </div>
+                
+                <div class="submit">
+                    <button type="submit" class="submit" >Log In</button>
+                </div>
+                <div class="register">
+                    <span>Not regestered?</span><a href=""> Sign up.</a>
+                </div>
+            </form>
+    </div>
+
+<script type="module" src="..\login.js"></script>
+</body>
+</html>
