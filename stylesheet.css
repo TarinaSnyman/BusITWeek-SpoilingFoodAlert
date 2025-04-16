@@ -1,0 +1,92 @@
+body
+{
+    background-color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+.container
+{
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0,0.1);
+}
+
+header
+{
+    display: flex;
+    background-color: greenyellow;
+    flex: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header>h1
+{
+    font-weight: bolder;
+    color: darkgreen;
+    margin: 0;
+    font-size: 24px;
+}
+
+#btnLogout
+{
+    background-color: blueviolet;
+    border: none;
+    padding: 8px, 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#btnLogout:hover
+{
+    background-color: darkviolet;
+}
+
+#btnAdd
+{
+    width: 100%;
+    background-color: darkolivegreen;
+    color: wheat;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+#btnAdd:hover
+{
+    background-color: darkgreen;
+}
+
+.foodTableContainer
+{
+    border: 1px solid seagreen;
+    border-radius: 8px;
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.foodTableContainer>table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.foodTableContainer>table th
+{
+    text-align: center;
+    padding: 12px 15px;
+    background-color: cornsilk;
+    border-bottom: 2p solid darkgrey;
+    border: 5px solid olive;
+}
+.foodTableContainer>table td
+{
+    padding: 12px 15px;
+    border: 5px solid olive;
+    border-bottom: 1px solid darkslategrey;
+}

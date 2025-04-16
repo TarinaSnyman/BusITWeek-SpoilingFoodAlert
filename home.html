@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpoiltFoodAlert</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    
+    <div class = "container">
+        <header>
+            <H1>Spoiling Food Alert</H1>
+            <button id="btnLogout" onclick="">Logout</button>
+        </header>
+
+        <button id="btnAdd" onclick="">Add Food</button>
+
+        <div class="foodTableContainer">
+            <!--Hier verander ons die table dynamically deur om in die div bo se innHTML te verander-->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food Name</th>
+                        <th>Quantity</th>
+                        <th>Expiration Date</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
 </body>
 </html>
