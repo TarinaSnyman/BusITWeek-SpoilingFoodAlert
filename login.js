@@ -45,8 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.success) {
                 // Successful login
-                localStorage.setItem('name', data.firstName); // Store firstName
+                localStorage.setItem('userid', data.userID); // Store user ID
+                console.log('Stored userID in localStorage:', localStorage.getItem('userid')); //for debugging
                 window.location.href = 'home.html'; // Redirect to home page
+                console.log('Stored userID in localStorage:', localStorage.getItem('userid'));
+                
             } else {
                 // Display error message
                 displayErrorMessage();

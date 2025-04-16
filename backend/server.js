@@ -1,10 +1,10 @@
 const express = require('express');
-const ADODB = require('node-adodb');
+const mysql = require('mysql2/promise'); // Use mysql2 for MySQL connection
 const cors = require('cors');
 const app = express();
 const port = 3000;
 
-// middleware
+// Middleware
 const corsOptions = {
     origin: 'http://127.0.0.1:5500',
     methods: ['GET', 'POST'],
@@ -13,23 +13,38 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// Connection string to Access database 
+// MySQL connection configuration
+const dbConfig = {
+    host: 'localhost', 
+    port: 3306,       
+    user: 'root',      
+    password: '123456',      
+    database: 'SpoilAlertDB' 
+};
 
-const conn = ADODB.open('Provider=Microsoft.ACE.OLEDB.12.0;Data Source=..\\Database\\SpoilFoodAlertDB.accdb;');
-
+// Create a MySQL connection pool
+const pool = mysql.createPool(dbConfig);
 
 // Login endpoint
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
     try {
-        // Query the database
-        const query = `SELECT FirstName FROM Users WHERE UserName=? AND Password=?`;
-        const results = await conn.query(query, [username, password]);
+        // Get a connection from the pool
+        const connection = await pool.getConnection();
+
+        // Query the database (table name is 'User' as per your MySQL schema)
+        const [results] = await connection.execute(
+            'SELECT UserID FROM User WHERE UserName = ? AND Password = ?',
+            [username, password]
+        );
+
+        // Release the connection back to the pool
+        connection.release();
 
         if (results.length > 0) {
             // Successful login
-            res.json({ success: true, firstName: results[0].firstName });
+            res.json({ success: true, userID: results[0].UserID });
         } else {
             // Invalid credentials
             res.status(401).json({ success: false, message: 'Username or password is incorrect' });
