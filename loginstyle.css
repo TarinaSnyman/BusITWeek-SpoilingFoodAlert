@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-image: url(../Images/food2.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    text-decoration: underline;
+    color: rgb(228, 238, 118);
+}
+.pic{
+    width: 60%;
+    margin: auto;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+}
+ .loginBox{
+    position: relative;
+    width: 450px;
+    backdrop-filter: blur(25px);
+    border:2px solid grey;
+    border-radius: 15px;
+    padding: 7.5em 2.5em 4em 2.5em  ;
+    color: gainsboro;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+.loginHeader{
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    width: 140px;
+    height: 70px;
+    border-radius: 0 0 20px 20px;
+}
+.loginHeader span{
+    font-size: 30px;
+    font-weight:bold;
+    color: black;
+}
+.loginHeader::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%;
+    background: transparent;
+    box-shadow: 15px 0 0 0 grey;
+}
+.loginHeader::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 50%;
+    background: transparent;
+    box-shadow: -15px 0 0 0 grey;
+}
+.inputBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.inputField{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    background: transparent;
+    color: gainsboro;
+    padding-inline: 20px 50px;
+    border:2px solid gainsboro;
+    border-radius: 30px;
+    outline: none;
+}
+#uesr{
+   margin-bottom:10px
+}
+.label{
+    position: absolute;
+    top:15px;
+    left: 20px;
+    transition: .2s;
+}
+.inputField:focus~.label,.inputField:valid~.label{
+    position: absolute;
+    top: -10px;
+    left:20px;
+    font-size: 14px;
+    background-color: gainsboro;
+    border-radius: 30px;
+    color: black;
+    padding: 0 10px;
+}
+.icon{
+    position:absolute;
+    top:18px;
+    right: 25px;
+    font-size: 20px;
+}
+.remember-forget{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 10px;
+}
+.submit{
+    width: 100%;
+    height: 50px;
+    background-color: gainsboro;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.submit:hover{
+    background-color: gray;
+}
+.register{
+    text-align: center;
+    padding-top: 20px;
+}
+.register a{
+    font-weight: 500;
+}
+@media only screen and (max-width:564px){
+    .wrapper{
+        padding: 20px;
+    }
+    .loginBox{
+        padding: 7.5em 2.5em 4em 2.5em ;
+    }
+}
+
+ 

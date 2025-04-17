@@ -1,6 +1,6 @@
 body
 {
-    background-color: green;
+    background-color: rgb(85, 166, 85);
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
     margin: 0;
@@ -19,11 +19,13 @@ body
 header
 {
     display: flex;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     flex: auto;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #183e10;
     margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 header>h1
@@ -31,25 +33,49 @@ header>h1
     font-weight: bolder;
     color: darkgreen;
     margin: 0;
-    font-size: 24px;
+    font-size: 2rem;
+}
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1; 
+    min-width: 100px; 
+    max-width: 200px; 
+    text-align: center; 
 }
 
 #btnLogout
 {
-    background-color: blueviolet;
+    background-color: darkolivegreen;
     border: none;
     padding: 8px, 16px;
     border-radius: 5px;
     cursor: pointer;
+    color: wheat;
 }
 #btnLogout:hover
 {
-    background-color: darkviolet;
+    background-color: darkgreen;
 }
-
-#btnAdd
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    gap: 10px;
+    flex-direction: row; /* Stack buttons vertically on small screens */
+    align-items: center;
+    
+}
+#buttons button
 {
-    width: 100%;
+    /* width: 100%; */
     background-color: darkolivegreen;
     color: wheat;
     border: none;
@@ -58,14 +84,14 @@ header>h1
     margin-bottom: 15px;
     cursor: pointer;
 }
-#btnAdd:hover
+#buttons button:hover
 {
     background-color: darkgreen;
 }
 
 .foodTableContainer
 {
-    border: 1px solid seagreen;
+    border: 1px solid rgb(50, 127, 84);
     border-radius: 8px;
     padding: 15px;
     max-height: 400px;
@@ -87,6 +113,6 @@ header>h1
 .foodTableContainer>table td
 {
     padding: 12px 15px;
-    border: 5px solid olive;
-    border-bottom: 1px solid darkslategrey;
+    border: 3px solid olive;
+    background-color: rgb(250, 247, 234);
 }
