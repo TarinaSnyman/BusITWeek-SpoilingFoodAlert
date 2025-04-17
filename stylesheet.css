@@ -31,7 +31,12 @@ header>h1
     font-weight: bolder;
     color: darkgreen;
     margin: 0;
-    font-size: 24px;
+    font-size: 36px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    text-align: right;
+    align-content: center;
 }
 
 #btnLogout
@@ -49,14 +54,19 @@ header>h1
 
 #btnAdd
 {
-    width: 100%;
+    width: 80%;
     background-color: darkolivegreen;
+    display: flex;
+    justify-content: center;
     color: wheat;
     border: none;
     padding: 12px;
     border-radius: 5px;
     margin-bottom: 15px;
     cursor: pointer;
+    justify-self: center;
+    align-content: center;
+    text-align: right;
 }
 #btnAdd:hover
 {
