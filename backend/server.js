@@ -38,15 +38,10 @@ app.post('/login', async (req, res) => {
             'SELECT UserID FROM User WHERE UserName = ? AND Password = ?',
             [username, password]
         );
-
-        // Release the connection back to the pool
         connection.release();
-
         if (results.length > 0) {
-            // Successful login
             res.json({ success: true, userID: results[0].UserID });
         } else {
-            // Invalid credentials
             res.status(401).json({ success: false, message: 'Username or password is incorrect' });
         }
     } catch (error) {
@@ -54,7 +49,27 @@ app.post('/login', async (req, res) => {
         res.status(500).json({ success: false, message: 'Server error' });
     }
 });
+ // New endpoint to fetch user's food items
+app.get('/userfood/:userID', async (req, res) => {
+    const { userID } = req.params;
 
+    try {
+        const connection = await pool.getConnection();
+        const [results] = await connection.execute(
+            `SELECT f.FoodName, uf.Quantity, uf.ExpiryDate
+             FROM UserFood uf
+             JOIN Food f ON uf.FoodID = f.FoodID
+             WHERE uf.UserID = ?`,
+            [userID]
+        );
+        connection.release();
+
+        res.json({ success: true, foodItems: results });
+    } catch (error) {
+        console.error('Database error:', error);
+        res.status(500).json({ success: false, message: 'Server error' });
+    }
+});
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);

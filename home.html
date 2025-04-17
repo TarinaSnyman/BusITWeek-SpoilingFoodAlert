@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpoiltFoodAlert</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <!-- <script>console.log('userID from localStorage on home page:', localStorage.getItem('userid'));</script> just used for debuging--> 
+    <div class = "container">
+        <header>
+            <H1>Spoiling Food Alert</H1>
+            <button id="btnLogout" onclick="">Logout</button>
+        </header>
+
+        <div class="foodTableContainer">
+            <!--Hier verander ons die table dynamically deur om in die div bo se innHTML te verander-->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food Name</th>
+                        <th>Quantity</th>
+                        <th>Expiration Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div id="buttons">
+            <button id="btnAdd" onclick="">Add Food</button> 
+            <button id="btnRemove" onclick="">Remove Food</button>   
+            <button id="btnRecipe" onclick="">Recipes</button>
+            <button id="btnDonate" onclick="">Donations</button>
+        </div>
+    </div>
+
+    <script type="module" src="..\script.js"></script>
 </body>
 </html>
