@@ -1,0 +1,10 @@
+Set conn = CreateObject("ADODB.Connection")
+On Error Resume Next
+
+conn.Open "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Belgium Campus\2025\Extras\BusIT\SpoiltFoodAlertWebsite\BusITWeek-SpoilingFoodAlert\Database\SpoilFoodAlertDB.accdb;"
+If Err.Number <> 0 Then
+    MsgBox "Error: " & Err.Description
+Else
+    MsgBox "Connection successful!"
+End If
+conn.Close
