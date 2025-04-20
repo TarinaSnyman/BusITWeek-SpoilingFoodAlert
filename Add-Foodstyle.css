@@ -1,0 +1,63 @@
+body
+{
+    background-color: aquamarine;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: greenyellow;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: black;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid wheat;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+.back-btn:hover
+{
+    background-color: black;
+    color: white;
+}
+
+.save-btn {
+    display: block; 
+    width: auto; 
+    padding: 15px 30px; 
+    font-size: 1.1rem; 
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 0; 
+    transition: background-color 0.3s ease; 
+}
+.save-btn:hover {
+    background-color: darkgreen; 
+}
