@@ -1,0 +1,83 @@
+.confirmation-box {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: lightcyan;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.confirmation-box h2 {
+    color: #ef4444;
+    margin-bottom: 20px;
+}
+
+#itemDetails {
+    font-size: 1.1rem;
+    margin: 25px 0;
+    line-height: 1.6;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cancel-btn {
+    padding: 12px 25px;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.confirm-remove-btn {
+    padding: 12px 25px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-remove-btn:hover {
+    background-color: red;
+}
+
+.confirm-remove-btn:disabled {
+    background-color: lightpink;
+    cursor: not-allowed;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: white;
+    transition: all 0.2s ease;
+    border: 1px solid whitesmoke;
+}
+
+.back-btn::before {
+    transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: grey;
+    transform: translateX(-3px);
+}
+
+.back-btn:hover::before {
+    transform: translateX(-2px);
+}
